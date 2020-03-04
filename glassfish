@@ -1,0 +1,25 @@
+mv topup-reloaded-ear-1.0.0-SNAPSHOT.ear backup/ear/topup-reloaded-ear-1.0.0-SNAPSHOT.ear-$(date +%Y-%m-%d)?
+mv glassfish4/glassfish/domains/cardv2/config/topup-server-config.yml backup/yml/topup-server-config.yml-$(date +%Y-%m-%d)
+scp root@10.13.222.112:/home/cardv2/topup-reloaded-ear-1.0.0-SNAPSHOT.ear .
+scp root@10.13.222.112:/home/cardv2/glassfish4/glassfish/domains/cardv2/config/topup-server-config.yml .
+mv topup-server-config.yml glassfish4/glassfish/domains/cardv2/config/
+glassfish4/bin/asadmin undeploy --port 9048 topup-reloaded-ear-1.0.0-SNAPSHOT
+glassfish4/bin/asadmin restart-domain cardv2
+glassfish4/bin/asadmin deploy --port 9048 topup-reloaded-ear-1.0.0-SNAPSHOT.ear
+glassfish4/bin/asadmin restart-domain cardv2
+
+
+
+
+
+
+
+
+
+
+
+scp admin@10.13.194.125:/share/eSewaProd/card/* .
+glassfish4/bin/asadmin undeploy --port 9048 topup-reloaded-ear-1.0.0-SNAPSHOT
+
+
+glassfish4/bin/asadmin restart-domain cardv2
