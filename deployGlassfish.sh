@@ -6,7 +6,7 @@
 GLASSFISH_PASSWORD_FILE_PATH=/home/pwd
 
 ASADMIN_PATH="/home/glassfish4/glassfish/bin/asadmin"
-ASADMIN_BASE_CMD="$ASADMIN_PATH --host 10.13.209.100 --port 9048 --user admin2 --passwordfile $GLASSFISH_PASSWORD_FILE_PATH"
+ASADMIN_BASE_CMD="$ASADMIN_PATH --host 10.10.10.10 --port 9048 --user admin2 --passwordfile $GLASSFISH_PASSWORD_FILE_PATH"
 
 DEPLOY_EAR_FILE_PATH="Dummy-project-ear/target"
 DEPLOY_EAR_FILE_NAME="Dummy-project-ear-1.0-SNAPSHOT.ear"
